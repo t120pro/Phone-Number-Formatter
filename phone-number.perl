@@ -7,8 +7,8 @@ foreach $num (@phones) {
 	$num =~ /\(*(\d{3})*\)*[\D]*(\d{3})[\D]*(\d{4})( *[a-zA-Z.]*[xX][a-zA-Z.]* *(\d+))*/; #regex for phone number pattern
 	$num = "($1) $2-$3 Ext $5";
 
-	if (substr($num, 0, 2) eq "()"){ #inputs 410 for numbers without area code
-		substr($num, 0, 2) = "(410)";
+	if (substr($num, 0, 2) eq "()"){ #inputs 718 for numbers without area code
+		substr($num, 0, 2) = "(718)";
 	}
 
 	if (substr($num, -4, -1) eq "Ext"){ #removes "Ext" from numbers without an extension
